@@ -1,8 +1,8 @@
-For Kernel 4.15.x ~ 5.0.x (Linux Mint or Ubuntu Derivatives)
+For Kernel 4.15.x ~ 5.7.x (Linux Mint, Ubuntu or Debian Derivatives)
 
 ------------------
 
-How to install
+## How to install
 
 `sudo apt-get install build-essential git dkms linux-headers-$(uname -r)`
 
@@ -18,7 +18,7 @@ How to install
 
 ------------------
 
-Run following commands for disable power mangement and plugging/replugging issues.
+Run following commands for disable power management and plugging/replugging issues.
 
 `sudo mkdir -p /etc/modprobe.d/`
 
@@ -28,7 +28,7 @@ Run following commands for disable power mangement and plugging/replugging issue
 
 ------------------
 
-How to uninstall
+## How to uninstall
 
 `sudo dkms remove rtl8188fu/1.0 --all`
 
@@ -39,14 +39,25 @@ How to uninstall
 
 ------------------
 
-Alternativly, you can download and install rtl8188fu-dkms and rtl8188fufw-firmware deb files.
+## How to install from PPA repository
 
-https://github.com/kelebek333/rtl8188fu/raw/master/rtl8188fu-dkms_1.0.3_amd64.deb
+You can install rtl81188fu driver with following commands from PPA.
 
-https://github.com/kelebek333/rtl8188fu/raw/master/rtl8188fufw-firmware_1.0.1.deb
+for xUbuntu 16.04-18.04-19.10-20.04 / Linux Mint 18.x-19.x-20.x
+
+`sudo add-apt-repository ppa:kelebek333/kablosuz`
+
+`sudo apt-get update`
+
+`sudo apt install rtl8188fu-dkms`
+
 
 You can purge packages with following commands
 
 `sudo apt purge rtl8188fu-dkms`
 
-`sudo apt purge rtl8188fufw-firmware`
+------------------
+
+## How to install (for arm devices)
+
+https://github.com/kelebek333/rtl8188fu/tree/arm#how-to-install-for-arm-devices
